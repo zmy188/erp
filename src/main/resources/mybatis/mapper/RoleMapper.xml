@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zmy.erp.mapper.RoleMapper">
+    <!--<cache type="com.zmy.redis.RedisCache"/>-->
+    <insert id="insert">
+        insert into role(code,name_cn,role_describe) values ( #{code}, #{nameCn}, #{roleDescribe})
+    </insert>
+
+    <delete id="deleteOne" parameterType="Long">
+        delete from role where id = #{id}
+    </delete>
+
+    <update id="updateOne">
+        update role set name_cn = #{nameCn}, role_describe =  #{roleDescribe}
+    </update>
+
+    <update id="updateById">
+        update role set name_cn = #{1}, role_describe =  #{2}
+         WHERE
+            id = #{0}
+    </update>
+
+    <select id="findById" parameterType="Long" resultType="Role">
+        SELECT
+            *
+        FROM
+            role
+        WHERE
+            id = #{id}
+    </select>
+
+    <select id="findAllList" resultType="Role">
+        SELECT
+            *
+        FROM
+            role
+    </select>
+
+    <select id="findOneByArgs" parameterType="Map" resultType="Role">
+        select * from role
+        <where>
+            <if test="nameCn != null and nameCn != ''">
+                and name_cn = #{nameCn}
+            </if>
+            <if test="roleDescribe != null and roleDescribe != ''">
+                and role_describe = #{roleDescribe}
+            </if>
+        </where>
+        limit 1
+    </select>
+
+    <select id="findByArgs" parameterType="Map" resultType="Role">
+        select * from role
+        <where>
+            <if test="nameCn != null and nameCn != ''">
+                and name_cn = #{nameCn}
+            </if>
+            <if test="roleDescribe != null and roleDescribe != ''">
+                and role_describe = #{roleDescribe}
+            </if>
+        </where>
+    </select>
+
+    <select id="findByPage" parameterType="Map" resultType="Role">
+        select * from role
+        <where>
+            <if test="nameCn != null and nameCn != ''">
+                and name_cn = #{nameCn}
+            </if>
+            <if test="roleDescribe != null and roleDescribe != ''">
+                and role_describe = #{roleDescribe}
+            </if>
+        </where>
+    </select>
+</mapper>

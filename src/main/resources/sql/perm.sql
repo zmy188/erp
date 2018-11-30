@@ -1,0 +1,21 @@
+CREATE TABLE `perm` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '权限id',
+  `version` bigint(20) NOT NULL COMMENT '版本',
+  `code` varchar(200) COMMENT '资源代码',
+  `perm_name` varchar(200) COMMENT '资源名称',
+  `auth_type` varchar(10) NOT NULL COMMENT '需要验证的系统资源类型DICT_TYPE_RESOURCE:URL验证URL调用，MTD验证方法调用，MNU验证菜单资源，TAGTAG方式的资源验证',
+  `auth_string` varchar(10) NOT NULL COMMENT '待验证资源串：比如URL类型验证资源串/pages/front/login.jsp',
+  `res_level` bigint(20) COMMENT '资源层级',
+  `crt_id` bigint(20) COMMENT '创建人ID',
+  `crt_user` varchar(60) COMMENT '创建人',
+  `crt_dt` datetime DEFAULT NULL COMMENT '创建时间',
+  `opt_id` bigint(20) COMMENT '操作人ID',
+  `opt_user` varchar(60) DEFAULT NULL COMMENT '操作用户',
+  `opt_dt` datetime DEFAULT NULL COMMENT '操作时间',
+  `role_type` bigint(20) COMMENT '角色类型',
+  `is_valid` bigint(20) NOT NULL COMMENT '是否有效',
+  `remark` varchar(200) DEFAULT NULL COMMENT '备用字段',
+  `perm_id` varchar(200) DEFAULT NULL COMMENT 'id',
+  `perm_describe` varchar(255) DEFAULT NULL COMMENT '功能描述(备注)',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;

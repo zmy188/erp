@@ -1,0 +1,20 @@
+CREATE TABLE `role` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '角色id',
+  `version` bigint(20) NOT NULL COMMENT '版本',
+  `code` varchar(50) NOT NULL COMMENT '以前缀：ROLE_开头的角色编号，如ROLE_ADMIN',
+  `name_cn` varchar(40) DEFAULT NULL COMMENT '角色名称',
+  `name_en` varchar(40) DEFAULT NULL COMMENT '角色名称',
+  `name_gb` varchar(40) DEFAULT NULL COMMENT '角色名称',
+  `crt_id` bigint(20) COMMENT '创建人ID',
+  `crt_user` varchar(60) COMMENT '创建人',
+  `crt_dt` datetime DEFAULT NULL COMMENT '创建时间',
+  `opt_id` bigint(20) COMMENT '操作人ID',
+  `opt_user` varchar(60) DEFAULT NULL COMMENT '操作用户',
+  `opt_dt` datetime DEFAULT NULL COMMENT '操作时间',
+  `role_type` bigint(20) COMMENT '角色类型',
+  `is_valid` bigint(20) NOT NULL COMMENT '是否有效',
+  `remark` varchar(200) DEFAULT NULL COMMENT '备用字段',
+  `company_id` varchar(40) DEFAULT NULL COMMENT '公司ID',
+  `role_describe` varchar(255) DEFAULT NULL COMMENT '角色描述',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;

@@ -3,7 +3,6 @@ package com.zmy.erp.controller;
 import com.zmy.erp.domain.User;
 import com.zmy.erp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,7 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class UserController {
 
     @Autowired
-    @Qualifier("userServiceImpl")
+    //@Qualifier("userServiceImpl")
     private UserService userService;
 
     @RequestMapping("/index")

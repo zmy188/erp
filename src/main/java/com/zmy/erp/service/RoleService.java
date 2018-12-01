@@ -2,6 +2,9 @@ package com.zmy.erp.service;
 
 import com.zmy.erp.base.BaseService;
 import com.zmy.erp.domain.Role;
+import org.springframework.stereotype.Service;
 
-public interface RoleService extends BaseService<Role> {
+@Service
+public class RoleService extends BaseService<Role> {
+
 }

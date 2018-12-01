@@ -33,7 +33,7 @@ public class Perm implements Serializable {
 
     private Long roleType;
 
-    private Long isValid;
+    private String isValid;
 
     private String remark;
 
@@ -153,14 +153,6 @@ public class Perm implements Serializable {
         this.roleType = roleType;
     }
 
-    public Long getIsValid() {
-        return isValid;
-    }
-
-    public void setIsValid(Long isValid) {
-        this.isValid = isValid;
-    }
-
     public String getRemark() {
         return remark;
     }
@@ -183,5 +175,13 @@ public class Perm implements Serializable {
 
     public void setPermDescribe(String permDescribe) {
         this.permDescribe = permDescribe;
+    }
+
+    public String getIsValid() {
+        return isValid;
+    }
+
+    public void setIsValid(String isValid) {
+        this.isValid = isValid;
     }
 }

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zmy.erp.mapper.PermMapper">
+    <!--<cache type="com.zmy.redis.RedisCache"/>-->
+    <insert id="insert">
+        insert into perm(perm_name,auth_string,is_valid,perm_describe) values ( #{permName}, #{authString}, #{isValid}, #{permDescribe})
+    </insert>
+
+    <delete id="deleteOne" parameterType="Long">
+        delete from perm where id = #{id}
+    </delete>
+
+    <update id="updateOne">
+        update user set perm_name = #{permName}, auth_string =  #{authString}
+    </update>
+
+    <update id="updateById">
+        update user set perm_name = #{1}, auth_string =  #{2}
+         WHERE
+            id = #{0}
+    </update>
+
+</mapper>

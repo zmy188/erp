@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zmy.erp.mapper.RolePermMapper">
+    <!--<cache type="com.zmy.redis.RedisCache"/>-->
+    <insert id="insert">
+        insert into role_perm(role_id,perm_id) values ( #{roleId}, #{permId})
+    </insert>
+
+    <!--<delete id="deleteOne" parameterType="Long">-->
+        <!--delete from user where id = #{id}-->
+    <!--</delete>-->
+
+    <!--<update id="updateOne">-->
+        <!--update user set login_name = #{loginName}, login_pwd =  #{loginPwd}-->
+    <!--</update>-->
+
+    <!--<update id="updateById">-->
+        <!--update user set login_name = #{1}, login_pwd =  #{2}-->
+         <!--WHERE-->
+            <!--id = #{0}-->
+    <!--</update>-->
+
+    <!--<select id="findById" parameterType="Long" resultType="User">-->
+        <!--SELECT-->
+            <!--*-->
+        <!--FROM-->
+            <!--user-->
+        <!--WHERE-->
+            <!--id = #{id}-->
+    <!--</select>-->
+
+    <!--<select id="findAllList" resultType="User">-->
+        <!--SELECT-->
+            <!--*-->
+        <!--FROM-->
+            <!--user-->
+    <!--</select>-->
+
+    <!--<select id="findOneByArgs" parameterType="Map" resultType="User">-->
+        <!--select * from user-->
+        <!--<where>-->
+            <!--<if test="loginName != null and loginName != ''">-->
+                <!--and login_name = #{loginName}-->
+            <!--</if>-->
+            <!--<if test="loginPwd != null and loginPwd != ''">-->
+                <!--and login_pwd = #{loginPwd}-->
+            <!--</if>-->
+        <!--</where>-->
+        <!--limit 1-->
+    <!--</select>-->
+
+    <!--<select id="findByArgs" parameterType="Map" resultType="User">-->
+        <!--select * from user-->
+        <!--<where>-->
+            <!--<if test="loginName != null and loginName != ''">-->
+                <!--and login_name = #{loginName}-->
+            <!--</if>-->
+            <!--<if test="loginPwd != null and loginPwd != ''">-->
+                <!--and login_pwd = #{loginPwd}-->
+            <!--</if>-->
+        <!--</where>-->
+    <!--</select>-->
+
+    <!--<select id="findByPage" parameterType="Map" resultType="User">-->
+        <!--select * from user-->
+        <!--<where>-->
+            <!--<if test="loginName != null and loginName != ''">-->
+                <!--and login_name = #{loginName}-->
+            <!--</if>-->
+            <!--<if test="loginPwd != null and loginPwd != ''">-->
+                <!--and login_pwd = #{loginPwd}-->
+            <!--</if>-->
+        <!--</where>-->
+    <!--</select>-->
+</mapper>

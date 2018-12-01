@@ -32,4 +32,9 @@ public class RolePerm implements Serializable {
     public void setPermId(Long permId) {
         this.permId = permId;
     }
+
+    public RolePerm(Long roleId, Long permId) {
+        this.roleId = roleId;
+        this.permId = permId;
+    }
 }
